@@ -6,34 +6,28 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] Transform cam;
     [SerializeField] float moveSpeed;
-    [SerializeField] float rotationSpeed = 10f; // Added rotation speed
+    [SerializeField] float rotationSpeed = 10f;
     Quaternion targetRotation;
 
     void Start()
     {
-        targetRotation = transform.rotation; // Initialize with current rotation
+        targetRotation = transform.rotation;
     }
 
     void Update()
     {
         float x_move = Input.GetAxis("Horizontal");
-        float z_move = Input.GetAxis("Vertical"); // Changed y_move to z_move for standard 3D movement
+        float z_move = Input.GetAxis("Vertical");
 
-        Vector3 movementDirection = new Vector3(x_move, 0f, z_move).normalized; // Normalized to prevent faster diagonal movement
+        Vector3 movementDirection = new Vector3(x_move, 0f, z_move).normalized;
 
-        if (movementDirection.magnitude > 0.01f) // Check if there is any movement
+        if (movementDirection.magnitude > 0.01f)
         {
-            // Calculate the target rotation based on the movement direction and camera's Y-axis
             targetRotation = Quaternion.LookRotation(movementDirection);
-            targetRotation *= Quaternion.Euler(0, cam.eulerAngles.y, 0); // Apply camera's Y rotation
+            targetRotation *= Quaternion.Euler(0, cam.eulerAngles.y, 0);
         }
 
-        // Smoothly rotate towards the target rotation
         transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-
-        // Apply the movement
         transform.position += targetRotation * Vector3.forward * Time.deltaTime * moveSpeed * movementDirection.magnitude;
-        // Using Vector3.forward because the rotation now aligns with the movement
-        // Multiplying by movementDirection.magnitude ensures speed is consistent
     }
 }
