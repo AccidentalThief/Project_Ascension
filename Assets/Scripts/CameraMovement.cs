@@ -11,6 +11,10 @@ public class CameraMovement : MonoBehaviour
     float rotationX = 16.9f;
     //float rotationX;
 
+    void Start() {
+        followDistance = followDistance - target.position;
+    }
+
     void Update()
     {
         rotationX += Input.GetAxis("Mouse Y") * -mouseSensitivity;
