@@ -21,9 +21,15 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 movementDirection = new Vector3(x_move, 0f, z_move).normalized;
 
-        if (movementDirection.magnitude > 0.01f)
+        // if we move or shoot
+
+        if (movementDirection.magnitude > 0.01f || Input.GetMouseButton(0))
         {
-            targetRotation = Quaternion.LookRotation(movementDirection);
+            // LookRotation returns an error if looking towards (0, 0, 0)
+            if (Input.GetMouseButton(0) && movementDirection.magnitude < 0.01f)
+                targetRotation = Quaternion.LookRotation(new Vector3(0f, 0f, 1f)); 
+            else
+                targetRotation = Quaternion.LookRotation(movementDirection);
             targetRotation *= Quaternion.Euler(0, cam.eulerAngles.y, 0);
         }
 
