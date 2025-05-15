@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
         if (movementDirection.magnitude > 0.01f || Input.GetMouseButton(0))
         {
             // LookRotation returns an error if looking towards (0, 0, 0)
-            if (Input.GetMouseButton(0) && movementDirection.magnitude < 0.01f)
+            if (Input.GetMouseButton(0))
                 targetRotation = Quaternion.LookRotation(new Vector3(0f, 0f, 1f)); 
             else
                 targetRotation = Quaternion.LookRotation(movementDirection);
@@ -34,6 +34,9 @@ public class PlayerMovement : MonoBehaviour
         }
 
         transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-        transform.position += targetRotation * Vector3.forward * Time.deltaTime * moveSpeed * movementDirection.magnitude;
+        if (Input.GetMouseButton(0))
+            transform.position += targetRotation * movementDirection * Time.deltaTime * moveSpeed;
+        else
+            transform.position += targetRotation * Vector3.forward * Time.deltaTime * moveSpeed * movementDirection.magnitude;
     }
 }

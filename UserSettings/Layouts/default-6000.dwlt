@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Console
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 20
+  controlID: 42
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -831,9 +831,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -8.712151, y: -8.342361, z: -15.4635315}
+    m_Target: {x: -13.992984, y: -11.851233, z: 13.808166}
     speed: 2
-    m_Value: {x: -8.712151, y: -8.342361, z: -15.4635315}
+    m_Value: {x: -13.992984, y: -11.851233, z: 13.808166}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -879,13 +879,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.0685706, y: -0.93135726, z: 0.25958017, w: 0.24607798}
+    m_Target: {x: 0.27279198, y: -0.3868284, z: 0.12095484, w: 0.8725762}
     speed: 2
-    m_Value: {x: -0.06856839, y: 0.9313273, z: -0.25957182, w: -0.24607006}
+    m_Value: {x: -0.27279198, y: 0.3868284, z: -0.120954834, w: -0.87257624}
   m_Size:
-    m_Target: 12.124355
+    m_Target: 12.603547
     speed: 2
-    m_Value: 12.124355
+    m_Value: 12.603547
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -957,7 +957,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: b468ffff26a2ffff20fbffff94a40000
+      m_ExpandedIDs: 20fbffffd2a4000006a5000010a500001aa50000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1203,7 +1203,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials
+    - Assets/Sprites
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1213,16 +1213,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 60
   m_LastFolders:
-  - Assets/Materials
+  - Assets/Sprites
   m_LastFoldersGridSize: 60
   m_LastProjectPath: C:\Users\baisl\Projects\Project_Ascension
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b2a60000
-    m_LastClickedID: 42674
-    m_ExpandedIDs: 00000000f6a60000
+    scrollPos: {x: 0, y: 12}
+    m_SelectedIDs: 14b20000
+    m_LastClickedID: 45588
+    m_ExpandedIDs: 00000000d4a70000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1251,7 +1251,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f6a60000
+    m_ExpandedIDs: 00000000d4a70000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1277,10 +1277,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 74a6feff
+    m_LastClickedInstanceID: -88460
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300003aa400007ca50000dea70000e0a700003eb5000000000000eee00000
+    m_ExpandedInstanceIDs: c62300003aa400007ca50000dea70000e0a700003eb5000000000000eee0000018b20000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
