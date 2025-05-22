@@ -7,15 +7,28 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Transform cam;
     [SerializeField] float moveSpeed;
     [SerializeField] float rotationSpeed = 10f;
+    [SerializeField] float jumpForce = 10f;
+    Rigidbody rb;
     Quaternion targetRotation;
+    bool grounded;
 
     void Start()
     {
+        rb = transform.GetComponent<Rigidbody>();
         targetRotation = transform.rotation;
+    }
+
+    void OnCollisionEnter(Collision collision) {
+        grounded = true;
     }
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space) && grounded) {
+            grounded = false;
+            rb.AddForce(transform.up * jumpForce);
+        }
+
         float x_move = Input.GetAxis("Horizontal");
         float z_move = Input.GetAxis("Vertical");
 

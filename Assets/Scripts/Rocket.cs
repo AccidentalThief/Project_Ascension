@@ -3,16 +3,17 @@ using UnityEngine;
 public class Rocket : MonoBehaviour
 {
     [SerializeField] float speed;
-    
+
     void Start()
     {
         RaycastHit hit;
         Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
         if (Physics.Raycast(ray, out hit)) {
             transform.LookAt(hit.point);
+            Debug.Log("Hit: " + hit.point);
         }
         else {
-            Vector3 altTarget = ray.direction * 100;
+            Vector3 altTarget = ray.origin + ray.direction * 100;
             transform.LookAt(altTarget);
         }
     }
