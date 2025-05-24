@@ -422,7 +422,7 @@ MonoBehaviour:
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
-  m_Antialiasing: 2
+  m_Antialiasing: 3
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
@@ -441,7 +441,7 @@ MonoBehaviour:
     m_JitterScale: 1
     m_MipBias: 0
     m_VarianceClampScale: 0.9
-    m_ContrastAdaptiveSharpening: 0
+    m_ContrastAdaptiveSharpening: 1
 --- !u!114 &330585548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1599,6 +1599,7 @@ GameObject:
   - component: {fileID: 2102081238}
   - component: {fileID: 2102081237}
   - component: {fileID: 2102081236}
+  - component: {fileID: 2102081240}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -1688,13 +1689,37 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102081235}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.35355338, y: 0.35355338, z: -0.1464466, w: 0.8535535}
   m_LocalPosition: {x: -4.098, y: 4.765, z: 1.515}
   m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 45, z: 0}
+--- !u!114 &2102081240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102081235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 146d03dfd006e3945a25b1d98755411d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTarget: {fileID: 1436689897}
+  rotationSpeed: 1
+  hoverRadius: 5
+  followSpeed: 0.5
+  hoverAmplitude: 0.2
+  hoverFrequency: 1
+  desiredHeightOffset: 1.5
+  wobbleMagnitude: 0.5
+  wobbleFrequency: 1
+  distanceCorrectionThreshold: 0.5
+  maxAngleDegreesFromHorizontal: 60
+  upwardCreepDiscourageBias: 0.1
 --- !u!1 &2136490973
 GameObject:
   m_ObjectHideFlags: 0
